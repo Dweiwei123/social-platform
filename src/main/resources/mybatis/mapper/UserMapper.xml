@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.hellospringboot.mapper.UserMapper">
+
+    <select id="queryUserByUserid" parameterType="int" resultType="User">
+        select * from user where userId = #{userId};
+    </select>
+
+    <select id="queryUserByUsername" parameterType="String" resultType="User">
+        select * from user where username = #{username};
+    </select>
+
+    <select id="queryAllUser" resultType="User">
+        select * from user;
+    </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into user(userId,username,password,gender,email,birthday) values (#{userId},#{username},#{password},#{gender},#{email},#{birthday});
+    </insert>
+
+    <delete id="delUser" parameterType="int">
+        delete from user where userId = #{userId};
+    </delete>
+
+    <update id="updateUser" parameterType="User">
+        update user set username=#{username},password=#{password},gender=#{gender},email=#{email},birthday=#{birthday} where userId=#{userId};
+    </update>
+
+</mapper>

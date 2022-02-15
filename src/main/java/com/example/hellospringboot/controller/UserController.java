@@ -20,6 +20,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(value = {"/", "/index.html"})
+    public String index() {
+        return "sign-in";
+    }
+
     @ResponseBody //return不会再解析为跳转路径 而是数据
     @RequestMapping("/byq")
     public List<User> hi() {

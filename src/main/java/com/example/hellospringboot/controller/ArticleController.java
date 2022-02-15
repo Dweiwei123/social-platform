@@ -28,7 +28,7 @@ public class ArticleController {
         for (Article article:articleList) {
             System.out.println(article);
         }
-        return articleList;z
+        return articleList;
     }
 
     @ResponseBody //return不会再解析为跳转路径 而是数据

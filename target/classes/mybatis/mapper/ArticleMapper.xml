@@ -8,7 +8,7 @@
     </select>
 
     <select id="queryAllArticle" resultType="Article">
-        select * from article order By date desc;
+        select * from article order by date desc;
     </select>
 
     <insert id="addArticle" parameterType="Article">

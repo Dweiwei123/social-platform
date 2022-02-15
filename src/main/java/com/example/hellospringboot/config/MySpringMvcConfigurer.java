@@ -22,7 +22,7 @@ public class MySpringMvcConfigurer {
              */
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/").setViewName("sign-in");
+                registry.addViewController("/").setViewName("sign-in.html");
             }
 
         };
